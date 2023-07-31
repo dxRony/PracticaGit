@@ -12,6 +12,7 @@ public class Cartas {
     private Scanner leer;
     private Random ran;
     private boolean gano1;
+    private boolean gano2;
 
     public Cartas() {
         leer = new Scanner(System.in);
@@ -32,8 +33,9 @@ public class Cartas {
                     if (apuesta <= dinero) {
                         generarProbabilidad();
                         generarGanador();
-                        if (gano1 = true) {
-                            System.out.println("Gano la carta 1");
+
+                        if (gano1 == true) {
+                            System.out.println("GANO LA CARTA 1\n");
                             if (eleccion == 1) {
                                 dinero += apuesta;
                                 System.out.println("Felicidades, acabas de ganar: " + apuesta);
@@ -41,8 +43,8 @@ public class Cartas {
                                 dinero -= apuesta;
                                 System.out.println("PERDISTE");
                             }
-                            System.out.println("Tienes = " + dinero);
                         } else {
+                            System.out.println("GANO LA CARTA 2\n");
                             if (eleccion == 2) {
                                 dinero += apuesta;
                                 System.out.println("Felicidades, acabas de ganar: " + apuesta);
@@ -50,8 +52,8 @@ public class Cartas {
                                 dinero -= apuesta;
                                 System.out.println("PERDISTE");
                             }
-                            System.out.println("Tienes = " + dinero);
                         }
+                        System.out.println("Tienes = " + dinero + "\n");
                     } else {
                         System.out.println("No puedes apostar mas del dinero que tienes");
                     }
@@ -73,10 +75,12 @@ public class Cartas {
     }
 
     private void generarGanador() {
-        if (probabilidad >= 50) {
+        if (probabilidad <= 50) {
             gano1 = true;
-        } else {
+            gano2 = false;
+        } else if (probabilidad > 50) {
             gano1 = false;
+            gano2 = true;
         }
     }
 }
