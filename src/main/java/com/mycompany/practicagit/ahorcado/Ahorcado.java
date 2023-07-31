@@ -16,6 +16,12 @@ public class Ahorcado {
     private /*static*/ int contadorFallos = 0;
 
     public void juegoAhorcado() {
+        System.out.println("Bienvenido a Ahorcado");
+        System.out.println("Instrucciones:");
+        System.out.println("Ahorcado es un juego simple en el que un jugador trata de adivinar una palabra\n "
+                + "ingresando una letra o directamente una palabra, si el jugador falla al adivinar cualquier\n"
+                + "opción mencionada, se ira dibujando un hombre ahorcado parte por parte, por lo que si se\n"
+                + "completa el dibujo, se pierde el juego. Ten en cuenta que solo se puede fallar 7 veces\n\n");
         System.out.println("Porfavor ingrese una palabra para iniciar el juego: ");
         Scanner escaner = new Scanner(System.in);
         String palabra = escaner.nextLine();
@@ -23,7 +29,7 @@ public class Ahorcado {
         char[] letrasEncontradas = new char[letras.length];
         boolean palabraEncontrada = false;
         int contadorLetrasEncontradas = 0;
-
+        System.out.print("   ");
         for (int i = 0; i < letras.length; i++) {
             System.out.print("___ ");
             letrasEncontradas[i] = ' ';
@@ -31,9 +37,7 @@ public class Ahorcado {
 
         System.out.println("\n\n\n\nSeleccione con el número correspondiente una las siguientes opciones para empezar el juego: ");
         while (true) {
-            System.out.println("");
-            System.out.println("");
-            System.out.println("1. Ingresar una letra");
+            System.out.println("\n\n1. Ingresar una letra");
             System.out.println("2. Ingresar una palabra");
             System.out.print("\nOpción: ");
             int opcionElegida = Integer.parseInt(escaner.nextLine());

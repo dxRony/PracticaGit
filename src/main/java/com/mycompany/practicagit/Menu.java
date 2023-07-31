@@ -30,14 +30,13 @@ public class Menu {
                     salir = true;
                     break;
                 case 2:
-                    Basketball juego3 = new Basketball();
-                    juego3.motorJuegoBasketball();
-                    
+                    Basketball juego2 = new Basketball();
+                    juego2.motorJuegoBasketball();
                     salir = true;
                     break;
                 case 3:
-                    Cartas juego2 = new Cartas();
-                    juego2.motorDeJuegoCartas();
+                    Cartas juego3 = new Cartas();
+                    juego3.motorDeJuegoCartas();
                     salir = true;
                     break;
                 case 4:
