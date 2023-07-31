@@ -1,5 +1,6 @@
-package com.mycompany.practicagit;
+package com.mycompany.practicagit.cartas;
 
+import com.mycompany.practicagit.Menu;
 import java.util.Random;
 import java.util.Scanner;
 

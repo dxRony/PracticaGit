@@ -6,6 +6,7 @@ package com.mycompany.practicagit;
 
 import com.mycompany.practicagit.ahorcado.Ahorcado;
 import com.mycompany.practicagit.basketball.Basketball;
+import com.mycompany.practicagit.cartas.Cartas;
 import java.util.Scanner;
 
 /**
