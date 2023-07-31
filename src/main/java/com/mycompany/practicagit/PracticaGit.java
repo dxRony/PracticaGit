@@ -1,14 +1,14 @@
 package com.mycompany.practicagit;
 
-import com.mycompany.practicagit.basketball.Basketball;
-
-
 public class PracticaGit {
+
     public static void main(String[] args) {
-        Basketball juego3 = new Basketball();
-        juego3.motorJuegoBasketball();
+        System.out.println("Bienvenido a la práctica corta de Git");
+        System.out.println("Estudiantes que realizaron la práctica:");
+        System.out.println("Rony Mauricio Rojas Aguilar / 202031191");
+        System.out.println("Herberth Julian Reyes Pacajoj / 202230236\n\n");
         
-       // Cartas juego = new Cartas();
-      //  juego2.motorDeJuegoCartas();
+        Menu menu = new Menu();
+        menu.MenuPrincipal();
     }
 }

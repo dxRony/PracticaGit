@@ -63,6 +63,9 @@ public class Cartas {
         } else {
             System.out.println("Debes ingresar una cantidad positiva");
         }
+        System.out.println("\n");
+        Menu menu = new Menu();
+        menu.MenuPrincipal();
     }
 
     private void generarProbabilidad() {

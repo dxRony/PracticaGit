@@ -4,6 +4,7 @@
  */
 package com.mycompany.practicagit.ahorcado;
 
+import com.mycompany.practicagit.Menu;
 import java.util.Scanner;
 
 /**
@@ -91,7 +92,9 @@ public class Ahorcado {
             }
         }
 
-        System.out.println("La palabra es: " + palabra);
+        System.out.println("La palabra es: " + palabra + "\n\n");
+        Menu menu = new Menu();
+        menu.MenuPrincipal();
     }
 
     public /*static*/ void controladorFallos() {

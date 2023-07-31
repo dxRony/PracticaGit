@@ -1,5 +1,6 @@
 package com.mycompany.practicagit.basketball;
 
+import com.mycompany.practicagit.Menu;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -78,7 +79,9 @@ public class Basketball {
 
         System.out.println("Puntuaciones:\n"
                 + jugador1.getNombre() + " = " + jugador1.getPuntos() + "\n"
-                + jugador2.getNombre() + " = " + jugador2.getPuntos() + "\n");
+                + jugador2.getNombre() + " = " + jugador2.getPuntos() + "\n\n");
+        Menu menu = new Menu();
+        menu.MenuPrincipal();
     }
 
     private void generarTurnos() {
