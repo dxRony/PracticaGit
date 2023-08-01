@@ -85,7 +85,8 @@ public class Basketball {
     }
 
     private void generarTurnos() {
-        cantidadTurnos = ran.nextInt(5, 20);
+        //cantidadTurnos = ran.nextInt(5, 20);
+        cantidadTurnos = ran.nextInt(15) + 5;
     }
 
     private void definirJugadorInicial() {

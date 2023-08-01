@@ -13,12 +13,12 @@ import java.util.Scanner;
  */
 public class Ahorcado {
 
-    private /*static*/ int contadorFallos = 0;
+    private int contadorFallos = 0;
 
     public void juegoAhorcado() {
-        System.out.println("Bienvenido a Ahorcado");
+        System.out.println("Bienvenido a Ahorcado\n\n");
         System.out.println("Instrucciones:");
-        System.out.println("Ahorcado es un juego simple en el que un jugador trata de adivinar una palabra\n "
+        System.out.println("Ahorcado es un juego simple en el que un jugador trata de adivinar una palabra\n"
                 + "ingresando una letra o directamente una palabra, si el jugador falla al adivinar cualquier\n"
                 + "opción mencionada, se ira dibujando un hombre ahorcado parte por parte, por lo que si se\n"
                 + "completa el dibujo, se pierde el juego. Ten en cuenta que solo se puede fallar 7 veces\n\n");
@@ -29,7 +29,7 @@ public class Ahorcado {
         char[] letrasEncontradas = new char[letras.length];
         boolean palabraEncontrada = false;
         int contadorLetrasEncontradas = 0;
-        System.out.print("   ");
+        System.out.print("   \n\n\n");
         for (int i = 0; i < letras.length; i++) {
             System.out.print("___ ");
             letrasEncontradas[i] = ' ';
@@ -45,7 +45,7 @@ public class Ahorcado {
             switch (opcionElegida) {
                 case 1:
                     System.out.print("Letra: ");
-                    /*char*/ String letraIngresada = escaner.nextLine()/*.charAt(0)*/;
+                    String letraIngresada = escaner.nextLine()/*.charAt(0)*/;
                     for (int i = 0; i < letras.length; i++) {
                         String letraArreglo = String.valueOf(letras[i]);
                         if (letraIngresada.equalsIgnoreCase(letraArreglo) /*==letras[i]*/) {
@@ -101,10 +101,10 @@ public class Ahorcado {
         menu.MenuPrincipal();
     }
 
-    public /*static*/ void controladorFallos() {
+    public void controladorFallos() {
         contadorFallos++;
-        System.out.println("Has fallado");
-        System.out.println("Fallos: " + contadorFallos);
+        System.out.println("\nHas fallado");
+        System.out.println("Fallos: " + contadorFallos + "\n\n");
         Dibujo dibujo = new Dibujo();
         dibujo.dibujoAhorcado(contadorFallos);
     }
