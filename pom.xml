@@ -11,4 +11,22 @@
         <maven.compiler.target>11</maven.compiler.target>
         <exec.mainClass>com.mycompany.practicagit.PracticaGit</exec.mainClass>
     </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.mycompany.practicagit.PracticaGit</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <name>PracticaGit</name>
 </project>
